@@ -1,0 +1,86 @@
+<!-- <form [formGroup]="signupForm" (ngSubmit)="signup()">
+  First Name:<input type="text" formControlName="firstName"><br>
+  Last Name:<input type="text" formControlName="lastName"><br>
+  Email    :<input type="text" formControlName="email"><br>
+  password:<input type="text"  formControlName="password"><br>
+          <input type="submit" value="submit">
+</form> -->
+
+<div class="container w-25 mt-5 pt-5">
+
+<form [formGroup]="signupForm" (ngSubmit)="signup()">
+      
+  <div class="row mt-3">
+    <div class="col-12">
+      <div class="form-group">
+      <!-- <label for="firstName">First Name:</label> -->
+      <input  type="text" formControlName="firstName" placeholder="First Name" [ngClass]="{'is-invalid':submitted && signupForm.controls['firstName'].errors}"  class="form-control"> 
+      </div>
+      <div *ngIf="submitted && signupForm.controls['firstName'].errors" class="text-danger">
+        <div *ngIf="submitted && signupForm.controls['firstName'].errors['required']">
+          First Name is required
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="row mt-3">
+        <div class="col-12">
+          <div class="form-group">
+            <!-- <label for="lastName">Last Name:</label> -->
+            <input type="text" formControlName="lastName" placeholder="Last Name" [ngClass]="{'is-invalid':submitted && signupForm.controls['lastName'].errors}" class="form-control">
+          </div>
+          <div *ngIf="submitted && signupForm.controls['lastName'].errors" class="text-danger">
+            <div *ngIf="submitted && signupForm.controls['lastName'].errors['required']">
+              Last Name is required
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-12">
+          <div class="form-group">
+            <!-- <label for="email">Email:</label> -->
+            <input type="text" formControlName="email" placeholder="Email" [ngClass]="{'is-invalid':submitted && signupForm.controls['email'].errors}" class="form-control">
+          </div>
+          <div *ngIf="submitted && signupForm.controls['email'].errors" class="text-danger">
+            <div *ngIf="submitted && signupForm.controls['email'].errors['required']">
+              Email is required
+            </div>
+            <div *ngIf="submitted && signupForm.controls['email'].errors['email']" style="color:green">
+              Please enter a valid email
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-12">
+          <div class="form-group">
+            <!-- <label for="pasword">Password:</label> -->
+            <input type="text" formControlName="password" placeholder="Password" [ngClass]="{'is-invalid':submitted && signupForm.controls['password'].errors}" class="form-control">
+          </div>
+          <div *ngIf="submitted && signupForm.controls['password'].errors" class="text-danger">
+            <div *ngIf="submitted && signupForm.controls['password'].errors['required']">
+              Password is required
+            </div>
+            <div *ngIf="submitted && signupForm.controls['password'].errors['minlength']" style="color: green">
+              Minimum six characters required
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-12">
+          <div class="form-group">
+            <button   class="btn btn-primary">
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+
+</form>
+</div>

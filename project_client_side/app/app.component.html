@@ -1,0 +1,11 @@
+<!-- <app-signup></app-signup><br>
+
+<app-login></app-login> -->
+
+
+<a routerLink="signup" *ngIf="! isLoggedIn()">Signup</a>&nbsp;&nbsp;&nbsp;
+<a routerLink="login" *ngIf="! isLoggedIn()">Login</a>&nbsp;&nbsp;&nbsp;
+<a routerLink="changePassword" *ngIf="isLoggedIn()">Change Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="logout" *ngIf="isLoggedIn()">Logout</a>&nbsp;
+
+<router-outlet></router-outlet>

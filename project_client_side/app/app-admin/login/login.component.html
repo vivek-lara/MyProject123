@@ -1,0 +1,86 @@
+<!-- <form [formGroup]="loginForm" (ngSubmit)="authenticate()">
+        Email:<input type="text" formControlName="email"><br>
+        Password:<input type="text" formControlName="password"><br>
+        <input type="submit" value="submit">
+</form>
+
+<button (click)="forgottenPassword()">forgottenPassword</button>
+
+<form [formGroup]="forgottenPasswordForm" 
+      (ngSubmit)="sendMailOnForgottenPassword()"
+      *ngIf="forgottenPasswordEnabled">
+  Email:<input type="text" formControlName="email"/><br>
+         <input type="submit" value="reset password">
+</form> -->
+     
+<div class="container w-25 mt-5 pt-5">
+
+<form [formGroup]="loginForm" (ngSubmit)="authenticate()">
+        
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="form-group">
+                <!-- <label for="email">Email</label> -->
+                <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                </div>
+           </div>
+        </div>
+        
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="form-group">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                </div>
+        </div>
+        </div>
+
+        <div class="row mt-3">
+                <div class="col-12">
+                        <div class="form-group">
+                                <button  class="btn btn-primary">Login</button>
+                        </div>
+                </div>
+        </div><br>
+</form>        
+
+
+
+
+<div class="row mt-1">
+<div class="col-12">
+        <div class="form-group">
+        <button  (click)="forgottenPassword()" class="btn btn-primary">ForgottenPassword</button>
+        </div>     
+</div>
+</div>
+<!-- <div class="container">
+        <div class="row">
+                <div class="col-md-10 offset-md-5"></div>
+                <div class="form-group">
+                        <button (click)="logout()" class="btn btn-primary">Logout</button>
+                </div>
+        </div>
+</div> -->
+
+        <form [formGroup]="forgottenPasswordForm" 
+        (ngSubmit)="sendMailOnForgottenPassword()"
+        *ngIf="forgottenPasswordEnabled">
+               
+              <div class="row mt-3">
+                <div class="col-12">
+                <div class="form-group">
+                <!-- <label for="email">Email</label> -->
+                <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                </div>
+                </div>
+                </div>
+        
+        
+                <div class="form-group">
+                <button  class="btn btn-primary">Reset Password</button>
+                </div>
+        </form>        
+        
+        </div>
+
