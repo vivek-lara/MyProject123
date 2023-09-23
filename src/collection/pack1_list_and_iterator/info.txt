@@ -1,0 +1,63 @@
+whichever concept we use to store multiple elements and manage multiple elements is 
+called as collection api or collection framework
+we can not modify an array
+we can not store different type of elements in an array
+array does not has any in build methods
+collection is an interface extended by three other interfaces 1.list 2.queue 3.set
+map is also an interface but not extending collection 
+list maintains the order of addition or insertion as index no. is provided to the 
+elements while adding in the list 
+in order to maintain the elements in the queue format or stack format we required queue
+queue is based on first in, first out and stack is based on last in,first out
+if it is a perfect queue we can read and remove first element
+if it is a perfect stack we can read and remove last element
+while adding elements in the queue no index no. is or key is alloted hence order of 
+addition or insertion is not maintained in the queue
+set is only for avoiding duplicates ,order of insertion not preserved also in set like queue
+in map every value or element is having a key,hence map is used with a key value pair
+order of insertion not maintained in map also
+we can use enhanced for loop to read the elements under list,queue and set but enhanced for 
+loop is not used for map
+in list and map we can use get method
+in list we can use get method by supplying index no. in get method
+and in map we can supply key to the get method
+while in queue and set no get method is available as there is no key and index no.
+if our requirement is on order of addition then we should go for list
+if our requirement is first in first out ,last in first out then go for queue
+if requirement is for avoiding duplicates then go for set
+if requirement is adding the element with unique identifier i.e. with key go for map,we 
+need to remember that key to read the element
+under list stream there are three classes 1.ArrayList 2.Vector 3.LinkedList
+these three classes implement list interface
+if we require a multi threaded  environment ,vector should be used as it is synchronized
+but nowadays arraylist is used in place of vector by making arraylist as synchronized, as
+by default arraylist is non-synchronized.
+LinkedList class implements both list and queue
+while reading(or random access of) elements in ArrayList is very much effective than 
+LinkedList,as ArrayList internally using array (in array proper indexing of each element)
+but in LinkedList elements are scattered in the container and first element using its
+reference to read the 2nd element, 2nd element is using its reference to read the third 
+element.
+insertion is not very effective in arraylist while in linkedlist insertion is very effective,
+if insertion of elements is there then linkedlist should be  preferred. 
+arraylist implements list interface only while linkedlist implements list and queue both. 
+arraylist is non-synchronized while vector is synchronized
+
+list.add(Object e);list.add(3.5);list.add("abc");
+list.add(index i,Object e);list.add(2,"dds");list.add(5,"57");//for inserting
+list.set(inde i,Object e);//for replacing
+list.remove();
+list.get(int index);
+list.remove(Integer.valueOf(90));
+list.addAll(Collection c);
+list.addAll(int index, Collection c);
+
+
+
+
+
+
+
+
+
+   

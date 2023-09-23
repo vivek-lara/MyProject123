@@ -1,0 +1,19 @@
+ * in map put method first argument is a key and second arg is a value(key,value).
+ * it can have any kind of key and any kind of value
+ * hashMap does not maintain order of addition
+ * map stream's main functionality is maintaining a key value
+ *in hashMap same key is replacing its value in every next line
+ *key can not be duplicates in the hashMap and even in hole map section
+ *it is also using hashCode and equals method internally for key duplication purpose 
+ * if any element is storing successfully,then it returns null
+ * here in second sop 100 is replacing with 200,means 100 is no more,hence 100 printing
+ *in first line 100 is replacing null ,hence null is returning and printing in first sop.
+ *in last line no one is replacing 400,hence 400 is not printing
+ *in hashMap get method returns a null if there is no key which we are calling from get method
+ * hashMap allows any no.of null values
+ * keys can not be duplicate but values can be duplicate
+ *key should have only one null value while values can have any no. of null values 
+ *we cannot use for each loop directly in map,we can use through set in hashMap 
+ *null can not be inserted in hashtable neither as a key nor as a value. 
+ *hashtable is a synchronized whereas hashMap is non synchronized.
+ *linkedHashMap preserves the order of insertion 
