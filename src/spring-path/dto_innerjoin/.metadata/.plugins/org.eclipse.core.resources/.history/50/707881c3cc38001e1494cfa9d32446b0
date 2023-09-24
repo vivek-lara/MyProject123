@@ -1,0 +1,38 @@
+package com.example.dto_inner_join;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("student")
+public class StudentController {
+    @Autowired  
+	private StudentRepository studentRepository;
+    
+    @PostMapping
+    public Student save(@RequestBody Student student)
+    {
+    	return studentRepository.save(student);
+    }
+    
+    @GetMapping
+    public List<Student> readAll(){
+    	return (List<Student>)studentRepository.findAll();
+    }
+    
+    @GetMapping("dto")
+    public List<StudentDTO> findStudents(){
+    	return studentRepository.findStudents();
+    }
+    
+    @GetMapping("dto1")
+    public List<StudentDTO> readAllParent(){
+    	return studentRepository.readAllParent();
+    }
+}

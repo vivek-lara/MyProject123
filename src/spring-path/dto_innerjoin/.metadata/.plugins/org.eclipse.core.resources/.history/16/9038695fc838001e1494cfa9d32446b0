@@ -1,0 +1,45 @@
+package com.example.dto_inner_join;
+
+public class StudentDTO {
+    private Integer id;
+    private String firstName;
+    private String lastName;
+    private String genderName;
+    private String motherName;
+    private String fatherName;
+    private Integer ContactNumber;
+	public StudentDTO(Integer id, String firstName, String lastName, String genderName) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.genderName = genderName;
+	}
+	public String getMotherName() {
+		return motherName;
+	}
+	public String getFatherName() {
+		return fatherName;
+	}
+	public Integer getContactNumber() {
+		return ContactNumber;
+	}
+	public StudentDTO(String motherName, String fatherName, Integer contactNumber) {
+		super();
+		this.motherName = motherName;
+		this.fatherName = fatherName;
+		ContactNumber = contactNumber;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public String getGenderName() {
+		return genderName;
+	}
+}

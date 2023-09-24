@@ -1,0 +1,25 @@
+package com.example.datajpademo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EmployeeController {
+	
+	  @Autowired
+      private EmployeeRepository employeeRepository;
+	
+	  public Employee save(@RequestBody Employee employee)
+	  {
+		  System.out.println(employee.getFirstName());
+		  System.out.println(employee.getEmpId());
+		  System.out.println(employee.getLastName());
+		  employeeRepository.save(employee);
+		  return employee;
+	  }
+
+}
+/*
+ * every repository is autowirable
+ */

@@ -1,0 +1,11 @@
+package com.example.dto_inner_join;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+public interface StudentRepository extends CrudRepository<Student, Integer> {
+    @Query("select new com.example.dto_inner_join.StudentDTO(s.id,s.firstName,s.lastName,g.gender)from Student s inner join Gender g on(s.genderId = g.id)")
+    public List<StudentDTO> findStudents();
+}

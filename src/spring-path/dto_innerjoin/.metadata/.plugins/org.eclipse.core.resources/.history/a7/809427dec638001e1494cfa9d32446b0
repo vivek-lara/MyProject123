@@ -1,0 +1,38 @@
+package com.example.dto_inner_join;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Student {
+	@Id
+	private Integer id;
+    private String firstName;
+    private String lastName;
+    private Integer genderId;
+	public Integer getGenderId() {
+		return genderId;
+	}
+	public void setGenderId(Integer genderId) {
+		this.genderId = genderId;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+    
+}

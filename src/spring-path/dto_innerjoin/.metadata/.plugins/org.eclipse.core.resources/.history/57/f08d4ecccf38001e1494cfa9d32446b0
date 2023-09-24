@@ -1,0 +1,37 @@
+package com.example.dto_inner_join;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class ParentInfo {
+	  @Id
+      private Integer id;
+	  private String motherName;
+	  private String fatherName;
+	  private Integer ContactNumber;
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getMotherName() {
+		return motherName;
+	}
+	public void setMotherName(String motherName) {
+		this.motherName = motherName;
+	}
+	public String getFatherName() {
+		return fatherName;
+	}
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+	public Integer getContactNumber() {
+		return ContactNumber;
+	}
+	public void setContactNumber(Integer contactNumber) {
+		ContactNumber = contactNumber;
+	}
+}

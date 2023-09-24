@@ -1,0 +1,27 @@
+package com.example.dto_inner_join;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("parent")
+public class ParentInfoController {
+    @Autowired
+	private ParentInfoRepository parentInfoRepository;
+    
+    @PostMapping
+    public ParentInfo save(@RequestBody ParentInfo parentInfo)
+    {
+    	return parentInfoRepository.save(parentInfo);
+    }
+    @GetMapping
+    public List<ParentInfo> readAll(){
+    	return (List<ParentInfo>)parentInfoRepository.findAll();
+    }
+}

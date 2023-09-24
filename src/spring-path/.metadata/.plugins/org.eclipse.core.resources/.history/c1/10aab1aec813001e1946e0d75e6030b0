@@ -1,0 +1,39 @@
+package com.example.datajpademo;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Employee {
+	@Id
+	private String empId;
+	private String firstName;
+	private String lastName;
+	
+	public String getEmpId() {
+		return empId;
+	}
+	public void setEmpId(String empId) {
+		this.empId = empId;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}	
+
+}
+/*
+ * for every devlopment we need to create a crud operation(create read update delete)to interact with the database
+ * all the crude operations we develop in the repository
+ * repository is a layer which interacts with the database
+ * all the crud operations we develop in the repository layer
+ * for entity class we need to develop one repository
+ */
